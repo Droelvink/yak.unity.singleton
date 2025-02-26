@@ -12,7 +12,6 @@ namespace com.yak.singleton
             get
             {
                 _instance = Resources.Load<T>($"SingleInstances/{typeof(T)}");
-                Debug.Log(_instance);
                 return _instance == null ? CreateInstance() : _instance;
             }
         }
